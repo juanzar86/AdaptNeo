@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+}
+
+.header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
