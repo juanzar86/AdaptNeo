@@ -1,2 +1,27 @@
 gestacion.js
- 
+ import { mostrarParametros } from "./modules/gestacion.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const root = document.getElementById("root");
+
+  root.innerHTML = `
+    <h2>AdaptNeo - Parámetros por semana de gestación</h2>
+    <label for="semana">Selecciona semanas de gestación:</label>
+    <select id="semana">
+      <option value="28">28</option>
+      <option value="32">32</option>
+      <option value="36">36</option>
+      <option value="40">40</option>
+    </select>
+    <div id="parametros"></div>
+  `;
+
+  const select = document.getElementById("semana");
+  const parametrosDiv = document.getElementById("parametros");
+
+  select.addEventListener("change", function () {
+    const semana = parseInt(select.value);
+    parametrosDiv.innerHTML = mostrarParametros(semana);
+  });
+});
+
