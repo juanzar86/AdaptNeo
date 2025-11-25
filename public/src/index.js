@@ -1,17 +1,47 @@
+import { mostrarSomatometria } from "./modules/somatometria.js";
+import { mostrarSignos } from "./modules/signos.js";
+import { mostrarApgar } from "./modules/apgar.js";
+import { mostrarSilverman } from "./modules/silverman.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   const root = document.getElementById("root");
-  root.innerHTML = `
-    <section>
-      <h2>Evaluación Neonatal</h2>
-      <form>
-        <label>Frecuencia cardíaca:</label>
-        <input type="number" placeholder="latidos/min" />
-        <br />
-        <label>Frecuencia respiratoria:</label>
-        <input type="number" placeholder="respiraciones/min" />
-        <br />
-        <button type="submit">Guardar</button>
-      </form>
-    </section>
+
+  // Crear selector de módulos
+  const selector = document.createElement("select");
+  selector.id = "modulo";
+  selector.innerHTML = `
+    <option value="">Selecciona módulo</option>
+    <option value="somatometria">Somatometría</option>
+    <option value="signos">Signos Vitales</option>
+    <option value="apgar">Escala Apgar</option>
+    <option value="silverman">Escala Silverman</option>
   `;
+  root.appendChild(selector);
+
+  // Crear contenedor para mostrar el contenido del módulo
+  const contenido = document.createElement("div");
+  contenido.id = "contenido";
+  root.appendChild(contenido);
+
+  // Escuchar cambios en el selector
+  selector.addEventListener("change", () => {
+    const modulo = selector.value;
+    switch (modulo) {
+      case "somatometria":
+        contenido.innerHTML = mostrarSomatometria();
+        break;
+      case "signos":
+        contenido.innerHTML = mostrarSignos();
+        break;
+      case "apgar":
+        contenido.innerHTML = mostrarApgar();
+        break;
+      case "silverman":
+        contenido.innerHTML = mostrarSilverman();
+        break;
+      default:
+        contenido.innerHTML = "";
+    }
+  });
 });
+
