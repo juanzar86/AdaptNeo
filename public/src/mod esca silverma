@@ -2,7 +2,8 @@ silverman.js
 export function mostrarSilverman() {
   return `
     <h3>Escala Silverman</h3>
-    <label>Retracción Intercostal: 
+
+    <label>Retracción Intercostal:
       <select>
         <option value="0">0 - Ausente</option>
         <option value="1">1 - Leve</option>
@@ -10,7 +11,7 @@ export function mostrarSilverman() {
       </select>
     </label><br>
 
-    <label>Retracción Xifoidea: 
+    <label>Retracción Xifoidea:
       <select>
         <option value="0">0 - Ausente</option>
         <option value="1">1 - Leve</option>
@@ -18,7 +19,7 @@ export function mostrarSilverman() {
       </select>
     </label><br>
 
-    <label>Retracción Supraclavicular: 
+    <label>Retracción Supraclavicular:
       <select>
         <option value="0">0 - Ausente</option>
         <option value="1">1 - Leve</option>
@@ -26,7 +27,7 @@ export function mostrarSilverman() {
       </select>
     </label><br>
 
-    <label>Aleteo Nasal: 
+    <label>Aleteo Nasal:
       <select>
         <option value="0">0 - Ausente</option>
         <option value="1">1 - Leve</option>
@@ -34,7 +35,7 @@ export function mostrarSilverman() {
       </select>
     </label><br>
 
-    <label>Quejido Espiratorio: 
+    <label>Quejido Espiratorio:
       <select>
         <option value="0">0 - Ausente</option>
         <option value="1">1 - Audible con estetoscopio</option>
@@ -43,3 +44,7 @@ export function mostrarSilverman() {
     </label>
   `;
 }
+
+
+
+   
