@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AdaptNeo · Evaluación Neonatal</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <meta charset="UTF-8">
+  <title>NeoClinic – Plataforma de Evaluación Neonatal</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <<div id="root"></div>
-<script type="module" src="index.js"></script>
+  <header>
+    <h1>NeoClinic – AdaptNeo</h1>
+    <p>Universidad Veracruzana – Maestría en Enfermería</p>
+  </header>
+
+  <main>
+    <!-- Módulo Apgar -->
+    <section>
+      <h2>Evaluación Apgar</h2>
+      <form id="apgarForm">
+        <label>Coloración:
+          <select name="color">
+            <option value="0">0 – Cianótico</option>
+            <option value="1">1 – Acrocianosis</option>
+            <option value="2">2 – Rosado</option>
+          </select>
+        </label>
+        <label>Frecuencia cardíaca:
+          <select name="fc">
+            <option value="0">0 – Ausente</option>
+            <option value="1">1 – <100</option>
+            <option value="2">2 – >100</option>
+          </select>
+        </label>
+        <label>Gesticulación:
+          <select name="gesto">
+            <option value="0">0 – Ausente</option>
+            <option value="1">1 – Muecas</option>
+            <option value="2">2 – Llanto</option>
+          </select>
+        </label>
+        <label>Tono muscular:
+          <select name="tono">
+            <option value="0">0 – Flácido</option>
+            <option value="1">1 – Flexión débil</option>
+            <option value="2">2 – Activo</option>
+          </select>
+        </label>
+        <label>Respiración:
+          <select name="resp">
+            <option value="0">0 – Ausente</option>
+            <option value="1">1 – Irregular</option>
+            <option value="2">2 – Llanto fuerte</option>
+          </select>
+        </label>
+        <button type="submit">Calcular Apgar</button>
+      </form>
+      <p id="apgarResultado"></p>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 NeoClinic – AdaptNeo | Créditos: Universidad Veracruzana – Maestría en Enfermería</small>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
-
 
 
