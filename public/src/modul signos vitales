@@ -1,0 +1,10 @@
+signos.js
+export function mostrarSignos() {
+  return `
+    <h3>Signos Vitales</h3>
+    <label>Frecuencia Cardíaca (lpm): <input type="number" /></label><br>
+    <label>Frecuencia Respiratoria (rpm): <input type="number" /></label><br>
+    <label>Temperatura (°C): <input type="number" step="0.1" /></label><br>
+    <label>Saturación O2 (%): <input type="number" /></label>
+  `;
+}
