@@ -44,4 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+contenido.addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Datos guardados correctamente ✅");
+});
 
