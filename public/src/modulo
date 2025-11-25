@@ -1,0 +1,10 @@
+somatometria.js
+export function mostrarSomatometria() {
+  return `
+    <h3>Somatometría Neonatal</h3>
+    <label>Peso (g): <input type="number" /></label><br>
+    <label>Talla (cm): <input type="number" /></label><br>
+    <label>Perímetro Cefálico (cm): <input type="number" /></label><br>
+    <label>Perímetro Torácico (cm): <input type="number" /></label>
+  `;
+}
