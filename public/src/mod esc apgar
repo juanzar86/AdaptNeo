@@ -1,0 +1,11 @@
+apgar.js
+export function mostrarApgar() {
+  return `
+    <h3>Escala APGAR</h3>
+    <label>Frecuencia Cardíaca: <select><option>0</option><option>1</option><option>2</option></select></label><br>
+    <label>Esfuerzo Respiratorio: <select><option>0</option><option>1</option><option>2</option></select></label><br>
+    <label>Tono Muscular: <select><option>0</option><option>1</option><option>2</option></select></label><br>
+    <label>Irritabilidad Refleja: <select><option>0</option><option>1</option><option>2</option></select></label><br>
+    <label>Coloración: <select><option>0</option><option>1</option><option>2</option></select></label>
+  `;
+}
