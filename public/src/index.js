@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   contenido.id = "contenido";
   root.appendChild(contenido);
 
-  // Escuchar cambios en el selector
+  // Mostrar módulo según selección
   selector.addEventListener("change", () => {
     const modulo = selector.value;
     switch (modulo) {
@@ -43,9 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
         contenido.innerHTML = "";
     }
   });
-});
-contenido.addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Datos guardados correctamente ✅");
+
+  // Validación básica para formularios
+  contenido.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Datos guardados correctamente ✅");
+  });
 });
 
